@@ -11,6 +11,6 @@ func handleIndex(c echo.Context) error {
 }
 func main() {
 	e := echo.New()
-
+	e.GET("/", handleIndex)
 	e.Logger.Fatal(e.Start(":8080"))
 }
