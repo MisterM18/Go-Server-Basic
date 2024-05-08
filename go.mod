@@ -1,4 +1,4 @@
-module myapp
+module mongkol
 
 go 1.22.2
 

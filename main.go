@@ -1,16 +1,14 @@
 package main
 
 import (
-	"net/http"
+	"mongkol/api/handlers"
 
 	"github.com/labstack/echo/v4"
 )
 
-func handleIndex(c echo.Context) error {
-	return c.JSON(http.StatusOK, map[string]string{"message": "Hello World"})
-}
 func main() {
 	e := echo.New()
-	e.GET("/", handleIndex)
+	e.GET("/Hello", handlers.HelloWorld)
+
 	e.Logger.Fatal(e.Start(":8080"))
 }
